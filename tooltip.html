@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset='utf-8'>
+    <link rel="stylesheet" >
+    <link href="./jquery.tip.css" rel="stylesheet" type="text/css">
     <style>
 body { margin: 10%; text-align: center; }
 td {
@@ -9,95 +11,34 @@ td {
   height: 100px;
   position: relative;
 }
-
-.tooltip {
-  position: absolute;
-  z-index: 1070;
-  color: #fff;
-  background-color: #000;
-  padding: 3px 8px;
-  border-radius: 4px;
-  overflow: visible;
-}
-
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-.tooltip.left .tooltip-arrow {
-  /* 箭头朝右 */
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid #000;
-  /* 纵向居中 */
-  top: 50%;
-  margin-top: -5px;
-  /* 置于右边框外侧 */
-  right: -5px;
-}
-.tooltip.right .tooltip-arrow {
-  /* 箭头朝左 */
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid #000;
-  /* 纵向居中 */
-  top: 50%;
-  margin-top: -5px;
-  /* 置于左边框外侧 */
-  left: -5px;
-}
-
-.tooltip.top .tooltip-arrow {
-  /* 箭头朝下 */
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #000;
-  /* 横向居中 */
-  left: 50%;
-  margin-left: -5px;
-  /* 置于下边框外侧 */
-  bottom: -5px;
-}
-
-.tooltip.bottom .tooltip-arrow {
-  /* 箭头朝上 */
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #000;
-  /* 横向居中 */
-  left: 50%;
-  margin-left: -5px;
-  /* 置于上边框外侧 */
-  top: -5px;
-}
     </style>
   <head>
   <body>
+
   <table>
     <tr>
       <td>
-        <div class="tooltip left">
-          <i class="tooltip-arrow"></i>
+        <div class="jq-tip left">
+          <i class="jq-tip-arrow"></i>
           hello, world
         </div>
       </td>
       <td>
-        <div class="tooltip top">
-          <i class="tooltip-arrow"></i>
+        <div class="jq-tip top">
+          <i class="jq-tip-arrow"></i>
           hello, world
         </div>
       </td>
       <td>
-        <div class="tooltip bottom">
-          <i class="tooltip-arrow"></i>
-          hello, world
+        <div class="jq-tip bottom">
+          <i class="jq-tip-arrow"></i>
+          hello,<br>world
         </div>
       </td>
       <td>
-        <div class="tooltip right">
-          <i class="tooltip-arrow"></i>
-          hello, world
+        <div class="jq-tip right">
+          <i class="jq-tip-arrow"></i>
+          hello,<br>world
         </div>
       </td>
     </tr>
