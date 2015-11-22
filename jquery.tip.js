@@ -9,25 +9,32 @@
  */
 
 (function ($) {
-  $.fn.tip = function (content, options) {
-    var $tip = get_tip(this.eq(0), content, options);
-    if (content) $tip.html(content);
-    return $tip;
-  };
+  $.fn.tip = get_tip;
 
   var $container;
-  var tpl = '<div class="jq-tip"><i class="jq-tip-arrow"></i></div>';
 
-  function get_tip ($e, content, options) {
+  function get_tip (content, options) {
+    var $e = this.eq(0);
     var $tip = $e.data('jq-tip');
     if ($tip) return $tip;
     if (!content) return $();
 
     if (!$container) $container = $('body').append('<div>');
-    options = $.extend({ place: 'auto' }, options);
-    var o = $e.offset();
+    $tip = $('<div class="jq-tip">').appendTo($container);
 
-    $tip = $(tpl).appendTo($container).offset(o);
+    $tip.html('<i class="jq-tip-arrow"></i>');
+    $tip.append(content);
+
+    var o = $e.offset();
+    o.left += $e.outerWidth() + 5;
+    $tip.addClass('right').offset(o);
+
+    $e.data('jq-tip', $tip);
     return $tip;
+  }
+
+  function try_place(o, $tip, place) {
+    var $viewport = $(document); 
+    
   }
 })(jQuery);
