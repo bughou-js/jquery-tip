@@ -8,16 +8,22 @@
     <script src="./jquery.tip.js" type="text/javascript"></script>
     <style>
 body { margin: 10%; text-align: center; }
-#target  { width: 100px; height: 50px; border: 1px solid #ccc; }
+.target  { width: 55px; height: 15px; border: 1px solid #ccc; margin: 50px; }
 
     </style>
   <head>
   <body>
 
-   <div id="target"></div>
+   <div id="target1" class="target"></div>
+   <div id="target2" class="target"></div>
+   <div id="target3" class="target"></div>
+   <div id="target4" class="target"></div>
 
    <script>
-   $('div').tip('hello, world');
+$('#target1').tip('hello, world', { place: 'right' });
+$('#target2').tip('hello, world', { place: 'top' });
+$('#target3').tip('hello, world', { place: 'left' });
+$('#target4').tip('hello, world', { place: 'bottom' });
    </script>
 
   </body>
