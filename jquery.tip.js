@@ -52,6 +52,7 @@
   ];
 
   function set_pos($tip, $target, place) {
+    $tip.removeClass('left right top bottom');
     var offset = $target.offset();
     var place = place.split(/\s+/);
     switch(place[0]) {

@@ -8,22 +8,50 @@
     <script src="./jquery.tip.js" type="text/javascript"></script>
     <style>
 body { margin: 10%; text-align: center; }
-.target  { width: 55px; height: 15px; border: 1px solid #ccc; margin: 50px; }
+.target  { 
+  display: inline-block;
+  width: 80px; 
+  height: 40px;
+  border: 1px solid #ccc;
+  margin: 50px;
+}
 
     </style>
   <head>
   <body>
 
-   <div id="target1" class="target"></div>
-   <div id="target2" class="target"></div>
-   <div id="target3" class="target"></div>
-   <div id="target4" class="target"></div>
+   <span id="target1" class="target"></span>
+   <span id="target2" class="target"></span>
+   <span id="target3" class="target"></span>
+   <span id="target4" class="target"></span>
+
+   <span id="target5" class="target"></span>
+   <span id="target6" class="target"></span>
+   <span id="target7" class="target"></span>
+   <span id="target8" class="target"></span>
+
+   <span id="target9" class="target"></span>
+   <span id="target10" class="target"></span>
+   <span id="target11" class="target"></span>
+   <span id="target12" class="target"></span>
 
    <script>
-$('#target1').tip('hello, world', { place: 'right' });
-$('#target2').tip('hello, world', { place: 'top' });
-$('#target3').tip('hello, world', { place: 'left' });
-$('#target4').tip('hello, world', { place: 'bottom' });
+$('#target1').tip('hello', { place: 'right' });
+$('#target2').tip('hello', { place: 'top' });
+$('#target3').tip('hello', { place: 'bottom' });
+$('#target4').tip('hello', { place: 'left' });
+
+$('#target5').tip('hello', { place: 'right top' });
+$('#target6').tip('hello', { place: 'right bottom' });
+
+$('#target7').tip('hello', { place: 'top left' });
+$('#target8').tip('hello', { place: 'top right' });
+
+$('#target9').tip('hello', { place: 'left top' });
+$('#target10').tip('hello', { place: 'left bottom' });
+
+$('#target11').tip('hello', { place: 'bottom left' });
+$('#target12').tip('hello', { place: 'bottom right' });
    </script>
 
   </body>
