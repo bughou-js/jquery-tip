@@ -17,7 +17,7 @@
   height: 0;
 }
 
-.jq-tip.left .jq-tip-arrow {
+.jq-tip.l .jq-tip-arrow {
   /* 箭头朝右 */
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
@@ -28,7 +28,7 @@
   /* 置于右边框外侧 */
   right: -5px;
 }
-.jq-tip.right .jq-tip-arrow {
+.jq-tip.r .jq-tip-arrow {
   /* 箭头朝左 */
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
@@ -40,7 +40,7 @@
   left: -5px;
 }
 
-.jq-tip.top .jq-tip-arrow {
+.jq-tip.t .jq-tip-arrow {
   /* 箭头朝下 */
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -52,7 +52,7 @@
   bottom: -5px;
 }
 
-.jq-tip.bottom .jq-tip-arrow {
+.jq-tip.b .jq-tip-arrow {
   /* 箭头朝上 */
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;

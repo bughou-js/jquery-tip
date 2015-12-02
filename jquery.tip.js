@@ -58,7 +58,7 @@
   // ];
 
   function set_pos($tip, $target, place) {
-    $tip.removeClass('left right top bottom');
+    $tip.removeClass('l r t b');
     place = place ? $.trim(place).split(/\s+/) : '';
 
     var offset = $target.offset();
@@ -82,7 +82,7 @@
   }
 
   function pos_right(offset, $tip, $target, place) {
-    $tip.addClass('right');
+    $tip.addClass('r');
     offset.left += $target.outerWidth() + 5;
     switch (place) {
       case 'top':
@@ -96,7 +96,7 @@
   }
 
   function pos_left(offset, $tip, $target, place) {
-    $tip.addClass('left');
+    $tip.addClass('l');
     offset.left -= ($tip.outerWidth() + 5);
     switch (place) {
       case 'top':
@@ -110,7 +110,7 @@
   }
 
   function pos_top(offset, $tip, $target, place) {
-    $tip.addClass('top');
+    $tip.addClass('t');
     offset.top -= ($tip.outerHeight() + 5);
     switch (place) {
       case 'left':
@@ -125,7 +125,7 @@
 
 
   function pos_bottom(offset, $tip, $target, place) {
-    $tip.addClass('bottom');
+    $tip.addClass('b');
     offset.top += ($target.outerHeight() + 5);
     switch (place) {
       case 'left':
