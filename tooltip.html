@@ -36,8 +36,12 @@ body { margin: 10%; text-align: center; }
    <span id="target12" class="target"></span>
 
    <script>
+$('#target1').tip('hello!', { place: 'right'}).hide();
 $('#target1').tip('hello', { place: 'right'});
+
 $('#target2').tip('hello', { place: 'top' });
+$('#target2').tip().hide();
+
 $('#target3').tip('hello', { place: 'bottom' });
 $('#target4').tip('hello', { place: 'left' });
 

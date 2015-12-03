@@ -27,13 +27,13 @@
     $tip.html('<i class="jq-tip-arrow"></i>');
     $tip.append(content);
     set_pos($tip, $target, options.place);
-    set_show($tip, $target, options.show_on);
-    set_hide($tip, $target, options.hide_on);
+    set_show_on($tip, $target, options.show_on);
+    set_hide_on($tip, $target, options.hide_on);
     set_timer($tip, options.time);
     return $tip;
   };
 
-  tip.defaults = { hide_on: { target: 'change' } };
+  tip.defaults = { };
 
   var $container;
 
@@ -42,7 +42,7 @@
     if ($tip) return $tip;
     if (!content) return $();
 
-    if (!$container) $container = $('body').append('<div>');
+    if (!$container) $container = $('<div>').appendTo('body');
     $tip = $('<div class="jq-tip">').appendTo($container);
     $target.data('jq-tip', $tip);
     $tip.data('target', $target);
@@ -58,7 +58,7 @@
   // ];
 
   function set_pos($tip, $target, place) {
-    $tip.removeClass('l r t b');
+    $tip.show().removeClass('l r t b');
     place = place ? $.trim(place).split(/\s+/) : '';
 
     var offset = $target.offset();
@@ -138,16 +138,15 @@
     }
   }
 
-  function set_show($tip, $target, event) {
-    if (!event) {
-      $tip.show(); return;
-    }
+  function set_show_on($tip, $target, event) {
+    if (!event) return;
     $target.on(event, function() {
       $tip.show();
     });
   }
 
-  function set_hide($tip, $target, event) {
+  function set_hide_on($tip, $target, event) {
+    if (!event) return;
     if (event.tip) $tip.on(event.tip, function () {
       $tip.hide();
     });
